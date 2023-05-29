@@ -17,9 +17,20 @@
     <p>Maa: <select></select></p>
     <p>Postinumero: <input type="number"></p>
     <p>Sähköposti: <input type="email"></p>
-    <p>Sukupuoli: <input type="radio"></p>
+    <p>
+        Sukupuoli: 
+        <input type="radio" id="mies" name="sukupuoli" checked="checked">
+            <label for="mies">Mies</label>
+        <input type="radio" id="nainen" name="sukupuoli">
+            <label for="nainen">Nainen</label>
+        <input type="radio" id="muu" name="sukupuoli">
+            <label for="muu">Muu</label>
+    </p>
     <p>Kieli: <input type="checkbox"></p>
     <p>Lisätietoja: <input type="text"></p>
+
+    <!-- <input type="radio" id="1dm" name="desimaalit" checked="checked">
+        <label for="1dm">1 desimaali</label><br> -->
 
     <button type="submit">Lähetä</button>
 
