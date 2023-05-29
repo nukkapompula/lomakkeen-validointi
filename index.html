@@ -8,48 +8,51 @@
     <title>Rekisteröitymislomake</title>
 </head>
 <body>
-    <h2>Rekisteröitymislomake</h2>
 
-    <p><b>Täydennä kentät tiedoillasi. Lisätietojen kirjoittaminen on vapaaehtoista.</b></p>
+    <form>
+        <h2>Rekisteröitymislomake</h2>
 
-    <p>Käyttäjä ID: <input type="text" id="kID" placeholder="vähintään 6 merkkiä"></p>
-    <p>Salasana: <input type="password" id="salasana"></p>
-    <p>Nimi: <input type="text" id="nimi"></p>
-    <p>Osoite: <input type="text" id="osoite"></p>
-    <p>
-        Maa: 
-        <select>
-            <option id="suomimaa" value="s">Suomi</option>
-            <option id="ruotsimaa" value="r">Ruotsi</option>
-            <option id="englantimaa" value="e">Iso-Britannia</option>
-            <option id="muumaa" value="m">Muu</option>
-        </select>
-    </p>
-    <p>Postinumero: <input type="number" id="postinro" placeholder="5 numeroa"></p>
-    <p>Sähköposti: <input type="email" id="sposti" placeholder="esi.merkki@qmail.com"></p>
-    <p>
-        Sukupuoli: 
-        <input type="radio" id="mies" name="sukupuoli">
-            <label for="mies">Mies</label>
-        <input type="radio" id="nainen" name="sukupuoli">
-            <label for="nainen">Nainen</label>
-        <input type="radio" id="muusukupuoli" name="sukupuoli">
-            <label for="muusukupuoli">Muu</label>
-    </p>
-    <p>
-        Kieli: 
-        <input type="checkbox" id="suomikieli" name="kieli">
-            <label for="suomikieli">suomi</label>
-        <input type="checkbox" id="ruotsikieli" name="kieli">
-            <label for="ruotsikieli">ruotsi</label>
-        <input type="checkbox" id="englantikieli" name="kieli">
-            <label for="englantikieli">englanti</label>
-        <input type="checkbox" id="muukieli" name="kieli">
-            <label for="muukieli">muu</label>
-    </p>
-    <p>Lisätietoja: <input type="text" id="extra"></p>
+        <p><b>Täydennä kentät tiedoillasi. Lisätietojen kirjoittaminen on vapaaehtoista.</b></p>
 
-    <button type="submit" id="laheta">Lähetä</button>
+        <p>Käyttäjä ID: <input type="text" id="kID" placeholder="vähintään 6 merkkiä"></p>
+        <p>Salasana: <input type="password" id="salasana"></p>
+        <p>Nimi: <input type="text" id="nimi"></p>
+        <p>Osoite: <input type="text" id="osoite"></p>
+        <p>
+            Maa: 
+            <select>
+                <option id="suomimaa" value="s">Suomi</option>
+                <option id="ruotsimaa" value="r">Ruotsi</option>
+                <option id="englantimaa" value="e">Iso-Britannia</option>
+                <option id="muumaa" value="m">Muu</option>
+            </select>
+        </p>
+        <p>Postinumero: <input type="number" id="postinro" placeholder="5 numeroa"></p>
+        <p>Sähköposti: <input type="email" id="sposti" placeholder="esi.merkki@qmail.com"></p>
+        <p>
+            Sukupuoli: 
+            <input type="radio" id="mies" name="sukupuoli">
+                <label for="mies">Mies</label>
+            <input type="radio" id="nainen" name="sukupuoli">
+                <label for="nainen">Nainen</label>
+            <input type="radio" id="muusukupuoli" name="sukupuoli">
+                <label for="muusukupuoli">Muu</label>
+        </p>
+        <p>
+            Kieli: 
+            <input type="checkbox" id="suomikieli" name="kieli">
+                <label for="suomikieli">suomi</label>
+            <input type="checkbox" id="ruotsikieli" name="kieli">
+                <label for="ruotsikieli">ruotsi</label>
+            <input type="checkbox" id="englantikieli" name="kieli">
+                <label for="englantikieli">englanti</label>
+            <input type="checkbox" id="muukieli" name="kieli">
+                <label for="muukieli">muu</label>
+        </p>
+        <p>Lisätietoja: <input type="text" id="extra"></p>
+
+        <button type="submit" id="laheta">Lähetä</button>
+    </form>
 
     <script src="toiminnot.js"></script>
 </body>
