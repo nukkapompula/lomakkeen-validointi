@@ -14,7 +14,15 @@
     <p>Salasana: <input type="password"></p>
     <p>Nimi: <input type="text"></p>
     <p>Osoite: <input type="text"></p>
-    <p>Maa: <select></select></p>
+    <p>
+        Maa: 
+        <select>
+            <option id="suomimaa" value="s">Suomi</option>
+            <option id="ruotsimaa" value="r">Ruotsi</option>
+            <option id="englantimaa" value="e">Iso-Britannia</option>
+            <option id="muumaa" value="m">Muu</option>
+        </select>
+    </p>
     <p>Postinumero: <input type="number"></p>
     <p>Sähköposti: <input type="email"></p>
     <p>
@@ -28,14 +36,14 @@
     </p>
     <p>
         Kieli: 
-        <input type="checkbox" id="suomi" name="kieli">
-            <label for="suomi">suomi</label>
-        <input type="checkbox" id="ruotsi" name="kieli">
-            <label for="ruotsi">ruotsi</label>
-        <input type="checkbox" id="englanti" name="kieli">
-            <label for="englanti">englanti</label>
+        <input type="checkbox" id="suomikieli" name="kieli">
+            <label for="suomikieli">suomi</label>
+        <input type="checkbox" id="ruotsikieli" name="kieli">
+            <label for="ruotsikieli">ruotsi</label>
+        <input type="checkbox" id="englantikieli" name="kieli">
+            <label for="englantikieli">englanti</label>
         <input type="checkbox" id="muukieli" name="kieli">
-            <label for="muukieli">muu kuin edellä mainitut</label>
+            <label for="muukieli">muu</label>
     </p>
     <p>Lisätietoja: <input type="text"></p>
 
