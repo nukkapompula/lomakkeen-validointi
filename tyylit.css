@@ -7,4 +7,5 @@ body, input, button {
     display: none;
     color: rgb(235, 29, 50);
     font-weight: bold;
+    text-decoration: overline;
 }

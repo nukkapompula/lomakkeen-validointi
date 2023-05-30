@@ -6,16 +6,16 @@ let virheNimi = document.getElementById("huonoNimi");
 let virheOsoite = document.getElementById("huonoOsoite");
 let virheMaa = document.getElementById("huonoMaa");
 let virhePostinro = document.getElementById("huonoPostinro");
+let virheSposti = document.getElementById("huonoSposti");
 
 let kaikkiOK = true;
 
 function tarkistaLomake(event){
+    event.preventDefault();
     // jokainen kenttä käydään läpi, alkaen...
     // Käyttäjä-ID
-    event.preventDefault();
     let iidee = document.getElementById("kID").value;
     if(iidee.length<6){
-        document.getElementById("kID").value = "";
         virheID.style.display = "block";
         kaikkiOK = false;
     } else {
@@ -66,11 +66,25 @@ function tarkistaLomake(event){
     // Postinumero
     let postinumero = document.getElementById("postinro").value;
     if(postinumero.length!=5){
-        document.getElementById("postinro").value = "";
         virhePostinro.style.display = "block";
         kaikkiOK = false;
     } else {
         virhePostinro.style.display = "none";
         kaikkiOK = true;
     }
+
+    // Sähköposti
+    let sposti = document.getElementById("sposti").value;
+    if(spostiTarkastus(sposti)){
+        virheSposti.style.display = "none";
+        kaikkiOK = true;
+    } else {
+        virheSposti.style.display = "block";
+        kaikkiOK = false;
+    }
+}
+
+function spostiTarkastus(osoite){
+    const ilmaus = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
+    return ilmaus.test(String(osoite).toLowerCase());
 }
