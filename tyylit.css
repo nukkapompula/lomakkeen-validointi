@@ -2,7 +2,7 @@ body, input, button {
     font-family: Courier, Arial;
 }
 
-.piilossa {
+#huonoID, #huonoPostinumero, #huonoSposti, #huonoSukupuoli, #huonokieli {
     display: none;
     color: red;
     font-weight: bold;

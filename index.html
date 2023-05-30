@@ -14,8 +14,8 @@
 
         <p><b>Täydennä kentät tiedoillasi. Lisätietojen kirjoittaminen on vapaaehtoista.</b></p>
 
-        <p>Käyttäjä-ID: <input type="text" id="kID" placeholder="vähintään 6 merkkiä"></p>
-            <p class="piilossa">ID:ssä täytyy olla vähintään 6 merkkiä.</p>
+        <p>Käyttäjä-ID: <input type="text" id="kID" placeholder='esim. "houkka"'></p>
+            <p id="huonoID">ID:ssä täytyy olla vähintään 6 merkkiä.</p>
         <p>Salasana: <input type="password" id="salasana"></p>
         <p>Nimi: <input type="text" id="nimi"></p>
         <p>Osoite: <input type="text" id="osoite"></p>
@@ -29,9 +29,9 @@
             </select>
         </p>
         <p>Postinumero: <input type="number" id="postinro" placeholder="5 numeroa"></p>
-            <p class="piilossa">Postinumerossa on oltava 5 numeroa.</p>
+            <p id="huonoPostinumero">Postinumerossa on oltava 5 numeroa.</p>
         <p>Sähköposti: <input type="email" id="sposti" placeholder="esi.merkki@qmail.com"></p>
-            <p class="piilossa">Tarkista sähköpostiosoitteesi muoto.</p>
+            <p id="huonoSposti">Tarkista sähköpostiosoitteesi muoto.</p>
         <p>
             Sukupuoli: 
             <input type="radio" id="mies" name="sukupuoli">
@@ -41,7 +41,7 @@
             <input type="radio" id="muusukupuoli" name="sukupuoli">
                 <label for="muusukupuoli">Muu</label>
         </p>
-        <p class="piilossa">Valitse yksi ylläolevista vaihtoehdoista.</p>
+        <p id="huonoSukupuoli"">Valitse yksi ylläolevista vaihtoehdoista.</p>
         <p>
             Kieli: 
             <input type="checkbox" id="suomikieli" name="kieli">
@@ -53,7 +53,7 @@
             <input type="checkbox" id="muukieli" name="kieli">
                 <label for="muukieli">muu</label>
         </p>
-        <p class="piilossa">Valitse osaamasi kielet.</p>
+        <p id="huonoKieli">Valitse osaamasi kielet.</p>
         <p>Lisätietoja: <input type="text" id="extra"></p>
 
         <button type="submit" id="laheta">Lähetä</button>
