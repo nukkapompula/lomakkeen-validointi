@@ -2,6 +2,8 @@ document.querySelector("button").addEventListener("click", tarkistaLomake);
 
 let virheID = document.getElementById("huonoID");
 let virheSalasana = document.getElementById("huonoSalasana");
+let virheNimi = document.getElementById("huonoNimi");
+let virheOsoite = document.getElementById("huonoOsoite");
 let virhePostinro = document.getElementById("huonoPostinro");
 
 let kaikkiOK = true;
@@ -25,6 +27,24 @@ function tarkistaLomake(event){
         kaikkiOK = false;
     } else {
         virheSalasana.style.display = "none";
+        kaikkiOK = true;
+    }
+
+    let nimi = document.getElementById("nimi").value;
+    if(nimi.length<1){
+        virheNimi.style.display = "block";
+        kaikkiOK = false;
+    } else {
+        virheNimi.style.display = "none";
+        kaikkiOK = true;
+    }
+
+    let osoite = document.getElementById("osoite").value;
+    if(osoite.length<1){
+        virheOsoite.style.display = "block";
+        kaikkiOK = false;
+    } else {
+        virheOsoite.style.display = "none";
         kaikkiOK = true;
     }
 
