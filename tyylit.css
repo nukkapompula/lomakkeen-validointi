@@ -1,3 +1,9 @@
 body, input, button {
     font-family: Courier, Arial;
 }
+
+.piilossa {
+    display: none;
+    color: red;
+    font-weight: bold;
+}
