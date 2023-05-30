@@ -2,8 +2,8 @@ body, input, button {
     font-family: Courier, Arial;
 }
 
-#huonoID, #huonoSalasana, #huonoNimi, #huonoOsoite, #huonoPostinro, #huonoSposti, 
-#huonoSukupuoli, #huonoKieli {
+#huonoID, #huonoSalasana, #huonoNimi, #huonoOsoite, #huonoMaa, 
+#huonoPostinro, #huonoSposti, #huonoSukupuoli, #huonoKieli {
     display: none;
     color: rgb(235, 29, 50);
     font-weight: bold;

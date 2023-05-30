@@ -4,12 +4,14 @@ let virheID = document.getElementById("huonoID");
 let virheSalasana = document.getElementById("huonoSalasana");
 let virheNimi = document.getElementById("huonoNimi");
 let virheOsoite = document.getElementById("huonoOsoite");
+let virheMaa = document.getElementById("huonoMaa");
 let virhePostinro = document.getElementById("huonoPostinro");
 
 let kaikkiOK = true;
 
 function tarkistaLomake(event){
-    // jokainen kenttä käydään läpi
+    // jokainen kenttä käydään läpi, alkaen...
+    // Käyttäjä-ID
     event.preventDefault();
     let iidee = document.getElementById("kID").value;
     if(iidee.length<6){
@@ -21,6 +23,7 @@ function tarkistaLomake(event){
         kaikkiOK = true;
     }
 
+    // Salasana
     let salasana = document.getElementById("salasana").value;
     if(salasana.length<1){
         virheSalasana.style.display = "block";
@@ -30,6 +33,7 @@ function tarkistaLomake(event){
         kaikkiOK = true;
     }
 
+    // Nimi
     let nimi = document.getElementById("nimi").value;
     if(nimi.length<1){
         virheNimi.style.display = "block";
@@ -39,6 +43,7 @@ function tarkistaLomake(event){
         kaikkiOK = true;
     }
 
+    // Osoite
     let osoite = document.getElementById("osoite").value;
     if(osoite.length<1){
         virheOsoite.style.display = "block";
@@ -48,6 +53,17 @@ function tarkistaLomake(event){
         kaikkiOK = true;
     }
 
+    // Maa
+    let maa = document.getElementsByTagName("select")[0].value;
+    if(maa=="oletus"){
+        virheMaa.style.display = "block";
+        kaikkiOK = false;
+    } else {
+        virheMaa.style.display = "none";
+        kaikkiOK = true;
+    }
+
+    // Postinumero
     let postinumero = document.getElementById("postinro").value;
     if(postinumero.length!=5){
         document.getElementById("postinro").value = "";
