@@ -1,11 +1,13 @@
 document.querySelector("button").addEventListener("click", tarkistaLomake);
 
 let virheID = document.getElementById("huonoID");
+let virheSalasana = document.getElementById("huonoSalasana");
 let virhePostinro = document.getElementById("huonoPostinro");
 
 let kaikkiOK = true;
 
 function tarkistaLomake(event){
+    // jokainen kenttä käydään läpi
     event.preventDefault();
     let iidee = document.getElementById("kID").value;
     if(iidee.length<6){
@@ -14,6 +16,15 @@ function tarkistaLomake(event){
         kaikkiOK = false;
     } else {
         virheID.style.display = "none";
+        kaikkiOK = true;
+    }
+
+    let salasana = document.getElementById("salasana").value;
+    if(salasana.length<1){
+        virheSalasana.style.display = "block";
+        kaikkiOK = false;
+    } else {
+        virheSalasana.style.display = "none";
         kaikkiOK = true;
     }
 
