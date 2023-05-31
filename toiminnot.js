@@ -8,6 +8,8 @@ let virheMaa = document.getElementById("huonoMaa");
 let virhePostinro = document.getElementById("huonoPostinro");
 let virheSposti = document.getElementById("huonoSposti");
 
+let virheKieli = document.getElementById("huonoKieli");
+
 let kaikkiOK = true;
 
 function tarkistaLomake(event){
@@ -80,6 +82,24 @@ function tarkistaLomake(event){
         kaikkiOK = true;
     } else {
         virheSposti.style.display = "block";
+        kaikkiOK = false;
+    }
+
+    // Sukupuoli
+
+    // Kieli
+    let kielet = document.getElementsByName("kieli");
+    let ruksi = 0;
+    for(indeksi=0; indeksi<kielet.length; indeksi++){
+        if(kielet[indeksi].checked){
+            ruksi += 1;
+        }
+    }
+    if(ruksi>0){
+        virheKieli.style.display = "none";
+        kaikkiOK = true;
+    } else {
+        virheKieli.style.display = "block";
         kaikkiOK = false;
     }
 }
