@@ -10,3 +10,8 @@ body, input, button, select, textarea {
     font-weight: bold;
     text-decoration: underline;
 }
+
+#takaisin, #onnistui {
+    display: none;
+    text-align: center;
+}

@@ -1,4 +1,5 @@
-document.querySelector("button").addEventListener("click", tarkistaLomake);
+document.getElementById("laheta").addEventListener("click", tarkistaLomake);
+document.getElementById("takaisin").addEventListener("click", uusiLomake);
 
 let virheID = document.getElementById("huonoID");
 let virheSalasana = document.getElementById("huonoSalasana");
@@ -116,8 +117,11 @@ function tarkistaLomake(event){
         kaikkiOK += 0;
     }
 
+    // rekisteröinnin hyväksyminen
     if(kaikkiOK==9){
-        alert("Rekisteröityminen onnistui! Tervetuloa!")
+        document.forms[0].style.display = "none";
+        document.getElementById("onnistui").style.display = "block";
+        document.getElementById("takaisin").style.display = "block";
     } else {
         alert("Rekisteröityminen epäonnistui. Korjaa punaisella merkityt puutteet tiedoissa.")
     }
@@ -127,4 +131,8 @@ function spostiTarkastus(osoite){
     // osoitteen testaus ns. Regular Expressionin avulla
     const ilmaus = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;
     return ilmaus.test(String(osoite).toLowerCase());
+}
+
+function uusiLomake(event){
+    console.log("klikkasit Takaisin -painiketta")
 }
