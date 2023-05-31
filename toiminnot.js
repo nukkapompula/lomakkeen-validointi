@@ -7,7 +7,7 @@ let virheOsoite = document.getElementById("huonoOsoite");
 let virheMaa = document.getElementById("huonoMaa");
 let virhePostinro = document.getElementById("huonoPostinro");
 let virheSposti = document.getElementById("huonoSposti");
-
+let virheSukupuoli = document.getElementById("huonoSukupuoli");
 let virheKieli = document.getElementById("huonoKieli");
 
 let kaikkiOK = true;
@@ -86,6 +86,20 @@ function tarkistaLomake(event){
     }
 
     // Sukupuoli
+    let sukupuoli = document.getElementsByName("sukupuoli");
+    let valinta = 0;
+    for(indeksi=0; indeksi<sukupuoli.length; indeksi++){
+        if(sukupuoli[indeksi].checked){
+            valinta += 1;
+        }
+    }
+    if(valinta>0){
+        virheSukupuoli.style.display = "none";
+        kaikkiOK = true;
+    } else {
+        virheSukupuoli.style.display = "block";
+        kaikkiOK = false;
+    }
 
     // Kieli
     let kielet = document.getElementsByName("kieli");
@@ -101,6 +115,12 @@ function tarkistaLomake(event){
     } else {
         virheKieli.style.display = "block";
         kaikkiOK = false;
+    }
+
+    if(kaikkiOK){
+        alert("Rekisteröityminen onnistui! Tervetuloa!")
+    } else {
+        alert("Rekisteröityminen epäonnistui. Korjaa punaisella merkityt puutteet tiedoissa.")
     }
 }
 

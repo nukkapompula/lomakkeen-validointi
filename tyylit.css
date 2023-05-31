@@ -7,5 +7,5 @@ body, input, button, select, textarea {
     display: none;
     color: rgb(235, 29, 50);
     font-weight: bold;
-    text-decoration: overline;
+    text-decoration: underline;
 }
