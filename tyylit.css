@@ -1,5 +1,6 @@
 body, input, button, select, textarea {
     font-family: Courier, Arial;
+    text-align: center;
 }
 
 #huonoID, #huonoSalasana, #huonoNimi, #huonoOsoite, #huonoMaa, 
