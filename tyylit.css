@@ -32,4 +32,5 @@ button {
 
 #takaisin:hover {
     color: rgb(235, 29, 50);
+    text-decoration: underline;
 }
