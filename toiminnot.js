@@ -123,7 +123,7 @@ function tarkistaLomake(event){
         document.getElementById("onnistui").style.display = "block";
         document.getElementById("takaisin").style.display = "block";
     } else {
-        alert("Rekisteröityminen epäonnistui. Korjaa punaisella merkityt puutteet tiedoissa.")
+        alert("Rekisteröityminen epäonnistui. Ole hyvä ja korjaa punaisella merkityt puutteet tiedoissa.")
     }
 }
 
@@ -134,5 +134,5 @@ function spostiTarkastus(osoite){
 }
 
 function uusiLomake(event){
-    console.log("klikkasit Takaisin -painiketta")
+    location.reload();
 }

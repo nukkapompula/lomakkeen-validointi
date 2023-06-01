@@ -1,6 +1,16 @@
-body, input, button, select, textarea {
+body, input, button, select, textarea, div {
     font-family: Courier, Arial;
     text-align: center;
+}
+
+textarea {
+    width: 200px;
+    height: 150px;
+    text-align: left;
+}
+
+button {
+    margin-top: 8px;
 }
 
 #huonoID, #huonoSalasana, #huonoNimi, #huonoOsoite, #huonoMaa, 
@@ -14,4 +24,8 @@ body, input, button, select, textarea {
 #takaisin, #onnistui {
     display: none;
     text-align: center;
+}
+
+#takaisin:hover {
+    color: rgb(235, 29, 50);
 }
