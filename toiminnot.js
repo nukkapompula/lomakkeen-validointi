@@ -67,7 +67,7 @@ function tarkistaLomake(event){
 
     // Postinumero
     let postinumero = document.getElementById("postinro").value;
-    if(postinumero.length!=5){
+    if(postinumero.length!=5 || Number(postinumero)<0){
         virhePostinro.style.display = "block";
         kaikkiOK += 0;
     } else {

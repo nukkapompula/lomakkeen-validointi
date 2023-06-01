@@ -9,6 +9,10 @@ textarea {
     text-align: left;
 }
 
+input, select {
+    text-align: left;
+}
+
 button {
     margin-top: 8px;
 }
